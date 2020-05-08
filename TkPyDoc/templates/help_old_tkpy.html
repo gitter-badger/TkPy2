@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<link type="text/css" href="{{ url_for('static', path='doc_style.css') }}" rel="stylesheet">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Help for old TkPy</title>
+</head>
+<body>
+<h1>TkPy文档-使用老版本的TkPy</h1>
+<h2>文档: </h2>
+<pre>
+轻量级PythonIDE: TkPy
+=======================
+
+
+-------------- |          |---------  \       /
+      |        |____      |        |   \     /
+      |        |   |      |________|    \   /
+      |        |___|      |              \ /
+      |        |    \     |               |
+      |        |     \    |               |
+      |        |      \   |               |
+
+
+         --------
+            |      ----------        ------------
+            |      |^$#$%^&*&        |
+            |      |$%^&^%#%^%       |
+            |      |***&^&^%%$%      |------------
+            |      |%%%%%%%%%%%      |
+            |      |$$$$$$$$$$$      |
+            |      |&&&&&&&&&&       |____________
+            |      -----------
+         --------
+
+
+
+提示:
+---------------
+    适用Python版本:
+        Python3.6
+        Python3.7
+        Python3.8
+        Python3.9 # <-- 只能实现基本功能,高级功能无法实现
+# -----------------------------------------------------------------------
+帮助:
+-----------
+    __all__ = ["MainWindow", "main", "ISANACONDA","ext"]
+    MainWindow ->主窗口类:
+        开启方法:
+            >>> from TkPy.__main__ import MainWindow
+            >>> Window = MainWindow()
+            >>> Window.get_start()
+            >>> Window.mainloop()
+    main:
+        MainWindow开启方法的打包
+        使用方法:
+            >>> from TkPy.__main__ import main
+            >>> main()
+
+
+            {Kite}: Hello to start Kite system.
+    ISANACONDA:
+        判断是否是在ANACODNA环境中
+        使用方法:
+            >>> ISANACODNA()
+            True
+# -----------------------------------------------------------------------
+使用帮助:
+----------
+    命令行操作:
+        (需要作为程序安装进计算机。)
+        Windows:
+            python -m TkPy # ->在此处打开IDE
+        如果是Ubuntu用户:
+            python3 -m TkPy
+        Windows用户升级用法:
+            py -python_version -m TkPy
+            py -m TkPy
+    看到\"{Kite}: Hello to start Kite system.\"表示启动成功。
+    特殊功能:
+        文件菜单:
+            重启:
+                重新打开这个窗口。(等于初始化，会清除所有自定义设置)
+                快捷键:
+                    Ctrl-R
+            退出这个窗口:
+                关闭这个窗口。
+                快捷键:
+                    Ctrl-W
+            退出所有窗口:
+                ⚠警告:
+                    本操作不会保存文件,请先保存文件。
+                退出所有窗口,不保存文件。
+                快捷键:
+                    Ctrl-D
+        查看菜单:
+            设置窗口大小:
+                输入像(width:height)这样的大小参数。
+            置顶:
+                置顶一个窗口
+                提示:
+                    置顶的窗口是可以改变指定顺序的。
+        运行菜单:
+            Cmd:
+                打开Cmd终端:
+                    打开一个新的Cmd终端
+            PowerShell:
+                打开PowerShell:
+                    打开一个新的PowerShell终端
+            运行CPython:
+                执行命令python
+                CPython是什么:
+                    CPython就是自带的Python解释器
+            运行IPython:
+                执行命令python -m IPython
+            运行Ptpython:
+                执行命令ptpython
+                Ptpython是什么:
+                    具体见"https://pypi.org/project/ptpython/"
+                运行PtIPython:
+                    运行ptpython的IPython模式
+            Python功能:
+                安装IPython:
+                    执行命令python -m pip install ipython
+                安装ptpython:
+                    执行命令python -m pip install ptpython
+                运行表达式:
+                    在一个新的Python窗口内运行表达式。
+                运行AutoPEP8:
+                    让您的代码一键遵循PEP8
+                    https://www.python.org/dev/peps/pep-0008/
+                创建Venv:
+                    创建一个新的Venv环境
+        工具菜单:
+            目录:
+                设置目录:
+                    设置终端的运行目录。
+                查看目录:
+                    显示现在的目录。
+                复制目录:
+                    复制现在的目录。
+                在此处打开资源管理器:
+                    在终端目录打开Windows资源管理器。
+                打开资源管理器:
+                    打开Windows资源管理器起始页。
+            系统:
+                打开简易计算器:
+                    打开系统内部的计算器。
+                打开系统计算器:
+                    打开Windows的计算器。
+            开发工具:
+                安装包:
+                    提供像PyCharm一样的安装包功能。
+                进入cmd调试模式:
+                    进入内部的Cmd应用进行调试。
+                DEBUG:
+                    启动调试模式,只限命令行。
+                    在调试窗中输入main()可开启主窗口。
+                转到包:
+                    转到指定的包的源码
+                    # NOTE
+                    打开或保存都会将源文件覆盖成库源码。
+                Anaconda操作:
+                    新建终端:
+                        新建终端, 可以自己输入环境。
+                    Jupyter:
+                        安装内核:
+                            安装一个新的Jupyter内核
+                        安装依赖:
+                            安装Jupyter的所有依赖
+</pre>
+</body>
+</html>

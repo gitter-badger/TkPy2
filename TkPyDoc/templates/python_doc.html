@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doc for {{ title_name }}</title>
+    <style>
+        body{
+            background: lightyellow;
+        }
+    </style>
+</head>
+<body>
+<h1>{{ title_name }}的文档</h1>
+{% if file_path %}
+    <p>安装目录: {{ file_path }} <button type="button" onclick="window.open('/TkPy/open/file?path={{ file_path }}')">打开安装目录</button> </p>
+    <p>文件地址: {{ file }}</p>
+{% endif %}
+<pre style="font-size: large; color: darkgreen">
+    {{ doc }}
+</pre>
+</body>
+</html>

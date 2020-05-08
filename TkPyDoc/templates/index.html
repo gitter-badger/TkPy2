@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<link type='image/bmp' href="{{ url_for('static', path='TkPyinfo.bmp') }}" rel="icon">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TkPy官方文档</title>
+    <style type="text/css">
+        a {
+            color: green
+        }
+    </style>
+    <script> ((window.gitter = {}).chat = {}).options = {
+        room:
+            'TkPy2/community'
+    }; </script>
+    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+</head>
+
+<body style="background-color: rgba(235, 225, 94, 0.822);">
+<h1 style="background-color: rgb(23, 156, 201);">
+    <a href="/" style="width: max-content;"><img src="{{ url_for('static', path='TkPy.bmp') }}"></a>
+    <label>TkPy 文档</label> <!--<h2>Python 3.8.0 Shell:</h2>
+        <iframe width="1000" height="300" src="https://console.python.org/python-dot-org-console/"></iframe>
+        -->
+
+</h1>
+<h2>TkPy文档目录</h2>
+<h3>请选择文档</h3>
+<div class="sidebarwrapper" style="float: left; margin-right: 0px; width: auto; top: 0px;">
+    <ul><!--width: 210px-->
+        {% for doc in docs %}
+            <a style="float: left" href="{{ doc.url_name }}">{{ doc.name }}</a><br>
+        {% endfor %}
+    </ul>
+</div>
+<iframe style="background-color: lightblue;" src="{{ url }}" scrolling='auto' seamless width="1200"
+        height="700"></iframe>
+</body>
+
+</html>
